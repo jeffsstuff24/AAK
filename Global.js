@@ -1,4 +1,4 @@
-var aak_rev = "251125-1200";
+var aak_rev = "251127-1739";
 
 var BasePath = [];
 initializeArray();
@@ -20,13 +20,16 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/back-to-bc" ,"Back to B.C.");
 	BasePath.push("https://comicskingdom.com/beetle-bailey-1" ,"Beetle Bailey");
 	BasePath.push("https://www.gocomics.com/ben" ,"Ben");
+	BasePath.push("https://www.gocomics.com/betty","Betty");
 	BasePath.push("https://comicskingdom.com/blondie" ,"Blondie");
+	BasePath.push("https://www.gocomics.com/boomerangs","Boomerangs");
 	BasePath.push("https://www.gocomics.com/bottomliners" ,"Bottomliners");
 	BasePath.push("https://comicskingdom.com/brilliant-mind-of-edison-lee" ,"Brilliant Mind of Edison");
 	BasePath.push("https://www.gocomics.com/calvinandhobbes" ,"Calvin and Hobbes");
 	BasePath.push("https://www.gocomics.com/closetohome" ,"Close to Home");
 	BasePath.push("https://www.gocomics.com/crankshaft" ,"Crankshaft");
 	BasePath.push("https://comicskingdom.com/crock" ,"Crock");
+	BasePath.push("https://www.gocomics.com/day-by-dave","Day by Dave");
 	BasePath.push("https://comicskingdom.com/dennis-the-menace" ,"Denise the Menace");
 	BasePath.push("https://www.gocomics.com/drabble" ,"drabble");
 	BasePath.push("https://comicskingdom.com/dustin" ,"Dustin");
@@ -37,7 +40,9 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/foxtrot" ,"FoxTrot");
 	BasePath.push("https://www.gocomics.com/foxtrotclassics" ,"Foxtrot Classics");
 	BasePath.push("https://www.gocomics.com/freshlysqueezed" ,"Freshly Squeezed");
+	BasePath.push("https://www.gocomics.com/funky-winkerbean","Funky Winkerbean");
 	BasePath.push("https://www.gocomics.com/grand-avenue" ,"Grand Avenue");	
+	BasePath.push("https://www.gocomics.com/gray-matters","Gray Matters");
 	BasePath.push("https://comicskingdom.com/hagar-the-horrible" ,"Hagar the Horrible");
 	BasePath.push("https://www.gocomics.com/heartofthecity" ,"Heart of the City");
 	BasePath.push("https://www.gocomics.com/herman" ,"Herman");	
@@ -77,3 +82,4 @@ function initializeArray()
 	BasePath.push("https://comicskingdom.com/zits" ,"Zits");
 
 }
+
