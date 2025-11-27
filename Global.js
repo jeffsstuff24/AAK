@@ -10,9 +10,11 @@ initializeArray();
 function initializeArray()
 {
 	BasePath = [];
-	BasePath.push("https://www.gocomics.com/9to5","9 to 5");			
+	BasePath.push("https://www.gocomics.com/9to5","9 to 5");	
+	BasePath.push("https://www.gocomics.com/adamathome","Adam@home");
 	BasePath.push("https://www.gocomics.com/andertoons" ,"Andertoons");
 	BasePath.push("https://www.arcamax.com/thefunnies/archie" ,"Archie");
+	BasePath.push("https://www.gocomics.com/babyblues","Baby Blues");
 	BasePath.push("https://www.gocomics.com/baldo" ,"Baldo");
 	BasePath.push("https://www.gocomics.com/bc" ,"B.C.");
 	BasePath.push("https://www.gocomics.com/back-to-bc" ,"Back to B.C.");
@@ -73,4 +75,5 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/wumo" ,"WuMo");
 	BasePath.push("https://www.gocomics.com/zackhill" ,"Zack Hill");
 	BasePath.push("https://comicskingdom.com/zits" ,"Zits");
+
 }
