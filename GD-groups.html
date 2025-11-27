@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>AAK - Groups</title>
+		<style>
+		
+			h2 {text-align: center;}
+			div {text-align: center;}
+		
+			input[type="text"] 
+			{
+				padding: 2px;
+				width: 200px;
+				font-size: 18px;
+			}
+			
+			#grad1 
+			{
+				height: 200px;
+				background-color: RGB(0,0,0); /* For browsers that do not support gradients */
+				<!-- background-image: linear-gradient(white, blue); -->
+			}
+			
+			
+			<!-- ///////////////////////////////////////////////////// -->
+			<!-- ////////////////AUTOCOMPLETE///////////////////////// -->
+			<!-- ///////////////////////////////////////////////////// -->
+			* {
+			  box-sizing: border-box;
+			}
+
+			body {
+			  font: 16px Arial;  
+			}
+
+			/*the container must be positioned relative:*/
+			.autocomplete {
+			  position: relative;
+			  display: inline-block;
+			}
+
+			input {
+			  border: 1px solid transparent;
+			  background-color: #f1f1f1;
+			  padding: 10px;
+			  font-size: 18px;
+			}
+
+			input[type=text] {
+			  background-color: #f1f1f1;
+			  width: 100%;
+			}
+
+			input[type=submit] {
+			  background-color: DodgerBlue;
+			  color: #fff;
+			  cursor: pointer;
+			}
+
+			.autocomplete-items {
+			  position: absolute;
+			  border: 1px solid #d4d4d4;
+			  border-bottom: none;
+			  border-top: none;
+			  z-index: 99;
+			  /*position the autocomplete items to be the same width as the container:*/
+			  top: 100%;
+			  left: 0;
+			  right: 0;
+			}
+
+			.autocomplete-items div {
+			  padding: 10px;
+			  cursor: pointer;
+			  background-color: #fff; 
+			  border-bottom: 1px solid #d4d4d4; 
+			}
+
+			/*when hovering an item:*/
+			.autocomplete-items div:hover {
+			  background-color: #e9e9e9; 
+			}
+
+			/*when navigating through the items using the arrow keys:*/
+			.autocomplete-active {
+			  background-color: DodgerBlue !important; 
+			  color: #ffffff; 
+			}			
+						
+			.centerTable 
+			{ 
+				margin: 0px auto; 
+				text-align: center; 
+				vertical-align: middle;				
+			}
+			
+			th, td 
+			{
+			  padding: 5px;
+			}
+			
+		</style>
+	</head>
+	<script src="Global.js"></script>
+	<body id="grad1">
+		<form autocomplete="off" action="/action_page.php">
+			<!-- ///////////////////////////////////////////////////// -->
+			<h2 style="color: white;" id="group">Group</h2>
+			<div id='Index' align="center"><a href="index.html">Back to Index</a></div>
+			<div id='docrev' style="text-align:center; margin:0 auto; color: #abb2b9; padding: 5px;">aak_rev</div> 		
+			
+			<!-- ///////////////////////////////////////////////////// -->
+			<table class="centerTable">
+				<tr>
+					<td><div class="autocomplete" style="width:200px;"><input type="text" id="tech1" placeholder="Technique 1..."></div> </td>
+					<td><button onclick="FindDesc(0)">Desc</button></td>
+				</tr>
+				<tr>
+					<td style="font-size:14px; color: rgb(255,255,255)" id="ans1"></td>
+					<td><button onclick="FindVideo(0)">Video</button></td>
+				<tr>
+				<tr>
+					<td><div class="autocomplete" style="width:200px;"><input type="text" id="tech2" placeholder="Technique 2..."></div> </td>
+					<td><button onclick="FindDesc(1)">Desc</button></td>
+				</tr>
+				<tr>
+					<td style="font-size:14px; color: rgb(255,255,255)" id="ans2"></td>
+					<td><button onclick="FindVideo(1)">Video</button></td>
+				<tr>				
+				<tr>
+					<td><div class="autocomplete" style="width:200px;"><input type="text" id="tech3" placeholder="Technique 3..."></div> </td>
+					<td><button onclick="FindDesc(2)">Desc</button></td>
+				</tr>
+				<tr>
+					<td style="font-size:14px; color: rgb(255,255,255)" id="ans3"></td>
+					<td><button onclick="FindVideo(2)">Video</button></td>
+				<tr>				
+				<tr>
+					<td><div class="autocomplete" style="width:200px;"><input type="text" id="tech4" placeholder="Technique 4..."></div> </td>
+					<td><button onclick="FindDesc(3)">Desc</button></td>
+				</tr>	
+				<tr>
+					<td style="font-size:14px; color: rgb(255,255,255)" id="ans4"></td>
+					<td><button onclick="FindVideo(3)">Video</button></td>
+				<tr>					
+				<tr>
+					<td><div class="autocomplete" style="width:200px;"><input type="text" id="tech5" placeholder="Technique 5..."></div> </td>
+					<td><button onclick="FindDesc(4)">Desc</button></td>
+				</tr>
+				<tr>
+					<td style="font-size:14px; color: rgb(255,255,255)" id="ans5"></td>
+					<td><button onclick="FindVideo(4)">Video</button></td>
+				<tr>					
+				<tr>
+					<td><div class="autocomplete" style="width:200px;"><input type="text"  id="tech6" placeholder="Technique 6..."></div> </td>
+					<td><button onclick="FindDesc(5)">Desc</button></td>
+				</tr>
+				<tr>
+					<td style="font-size:14px; color: rgb(255,255,255)" id="ans6"></td>
+					<td><button onclick="FindVideo(5)">Video</button></td>
+				<tr>				
+				<tr>
+					<td><div class="autocomplete" style="width:200px;"><input type="text" id="tech7" placeholder="Technique 7..."></div> </td>
+					<td><button onclick="FindDesc(6)">Desc</button></td>
+				</tr>
+				<tr>
+					<td style="font-size:14px; color: rgb(255,255,255)" id="ans7"></td>
+					<td><button onclick="FindVideo(6)">Video</button></td>
+				<tr>					
+				<tr>
+					<td><div class="autocomplete" style="width:200px;"><input type="text" id="tech8" placeholder="Technique 8..."></div> </td>
+					<td><button onclick="FindDesc(7)">Desc</button></td>
+				</tr>	
+				<tr>
+					<td style="font-size:14px; color: rgb(255,255,255)" id="ans8"></td>
+					<td><button onclick="FindVideo(7)">Video</button></td>
+				<tr>					
+			</table> 
+			
+	
+
+			<!-- ///////////////////////////////////////////////////// -->
+			<div>
+				<button id="btn_check">Check</button>
+			</div>
+			
+			<!-- ///////////////////////////////////////////////////// -->
+			<div >
+				<p style="font-size: 16px; color: white;" id="txt_results2"></p>
+			</div>
+			<!-- ///////////////////////////////////////////////////// -->
+
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>				
+		
+		</form>
+	</body>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<script>
+	
+		
+		document.getElementById("docrev").innerHTML = aak_rev;
+		/////////////////////////////////////////////////////////////
+		// COLLECT TECHNIQUE INFO FROM GOOGLE DRIVE
+		/////////////////////////////////////////////////////////////
+		
+		var dID = [];
+		var dRank = [];
+		var dTechnique = [];
+		var dAttack = [];
+		var dDescription = [];
+		var dExtension = [];
+		var dGroup = [];
+		var dCategory = [];
+		var dLink1 = [];
+		var dLink2 = [];
+
+		var dGroup_sorted = [];
+		var dCategory_sorted = [];	
+		
+		var rand = 0;
+		var ans_tech = [];
+		var ans_desc = [];
+		var ans_video1 = [];	
+		
+		var IsRandom = false;
+		var HideAttack = false;
+		var HideDescription = false;
+		
+		navigator.wakeLock.request('screen');
+
+		var url = 'https://script.google.com/macros/s/AKfycbyTfeKSNmua39wZqx84Qb50JaemSyW5xqylqQXoKntUAFCyO2jaKMW7j-vPwCGYoRP3/exec';
+
+		$.ajax({
+			url: url,
+			dataType: "json",
+			success: function (data) 
+			{   
+				//console.log("25 -> " + JSON.stringify(data));
+				//console.log("26 -> " + data.data.length);
+				
+				for (var i=0; i<data.data.length; i++) 
+				{
+					
+					dID.push(data.data[i].ID);
+					dRank.push(data.data[i].Rank);
+					dTechnique.push(data.data[i].Technique);
+					dAttack.push(data.data[i].Attack);
+					dDescription.push(data.data[i].Description);
+					dGroup.push(data.data[i].Group);
+					dCategory.push(data.data[i].Category);
+					dLink1.push(data.data[i].Link1);
+					dLink2.push(data.data[i].Link2);
+					
+					dCategory_sorted.push(data.data[i].Category);
+					dGroup_sorted.push(data.data[i].Group);
+
+				}
+			
+				DoQuiz();
+				
+			},
+			error: function (err) 
+			{
+				console.log("ERROR: " + err.status);
+			}
+		});
+
+		
+		/////////////////////////////////////////////////////////////
+		// Data Functions
+		/////////////////////////////////////////////////////////////			
+		
+		function DoQuiz() 
+		{
+			//alert("417");
+			HideAnswers();
+			//alert("419");
+			ClearData();
+			//alert("421");
+			GetRandomQuestion();
+			//alert("423");
+
+			// Set Group
+			group.innerText = dGroup[rand];
+			//alert("5 - Group = " + dGroup[rand]);
+			//alert("428");
+			// Get Answers
+			FindGroup();
+			//alert("6 - Answers Good");
+		}
+		
+		function FindGroup()
+		{
+			dbg_cnt = 0;
+			for (let i = 0; i < dID.length; i++) 
+			{
+				if (dGroup[rand] === dGroup[i])
+				{
+					//alert("437");
+					//alert(dbg_cnt + ")  " + dID[i] + " --- " + dGroup[rand] + " --- " + dTechnique[i]);
+					ans_tech.push(dTechnique[i]);
+					ans_desc.push(dDescription[i]);
+					//if (dLink1[i] != "")
+					//{
+					//	ans_video.push(dLink1[i]);
+					//}
+					
+					//////// DEBUG //////////////////
+					switch (dbg_cnt) 
+					{
+						case 0:
+							//document.getElementById("tech1").value = dTechnique[i];
+							ans1.innerText = dTechnique[i];
+							break;
+						case 1:
+							//document.getElementById("tech2").value = dTechnique[i];
+							ans2.innerText = dTechnique[i];
+							break;
+						case 2:
+							//document.getElementById("tech3").value = dTechnique[i];
+							ans3.innerText = dTechnique[i];
+							//alert("2");
+							break;
+						case 3:
+							//document.getElementById("tech4").value = dTechnique[i];
+							ans4.innerText = dTechnique[i];
+							//alert("3");
+							break;
+						case 4:
+							//document.getElementById("tech5").value = dTechnique[i];
+							ans5.innerText = dTechnique[i];
+							//alert("4");
+							break;
+						case 5:
+							//document.getElementById("tech6").value = dTechnique[i];
+							ans6.innerText = dTechnique[i];
+							//alert("5");
+							break;
+						case 6:
+							//document.getElementById("tech7").value = dTechnique[i];
+							ans7.innerText = dTechnique[i];
+							//alert("6");
+							break;
+						case 7:
+							//document.getElementById("tech8").value = dTechnique[i];
+							ans8.innerText = dTechnique[i];
+							//alert("7");
+							break;								
+						default:
+							//document.getElementById("tech1").value = "FAIL";
+							ans1.innerText = "Oh No!!";
+							//alert("99");
+							break;		
+					}
+					dbg_cnt++;
+
+				}
+			}
+			//alert("dbg_cnt = " + dbg_cnt);
+		}
+		
+		function GetRandomQuestion()
+		{
+			//Iterate however many times it takes to get a good technique	
+			do
+			{
+				rand = Math.floor(Math.random() * dID.length);
+				//alert("Group = " + dGroup[rand]);					
+			}while(dGroup[rand] == "x" || dGroup[rand] == "X");
+		}
+		
+		function ClearData()
+		{
+			//alert("start ClearData");
+			document.getElementById("tech1").value = "";
+			document.getElementById("tech2").value = "";
+			document.getElementById("tech3").value = "";
+			document.getElementById("tech4").value = "";
+			document.getElementById("tech5").value = "";
+			document.getElementById("tech6").value = "";
+			document.getElementById("tech7").value = "";
+			document.getElementById("tech8").value = "";
+			
+			// f1f1f1
+			document.getElementById("tech1").style.backgroundColor = "#f1f1f1";
+			document.getElementById("tech2").style.backgroundColor = "#f1f1f1";
+			document.getElementById("tech3").style.backgroundColor = "#f1f1f1";
+			document.getElementById("tech4").style.backgroundColor = "#f1f1f1";
+			document.getElementById("tech5").style.backgroundColor = "#f1f1f1";
+			document.getElementById("tech6").style.backgroundColor = "#f1f1f1";
+			document.getElementById("tech7").style.backgroundColor = "#f1f1f1";
+			document.getElementById("tech8").style.backgroundColor = "#f1f1f1";
+	
+			//				
+			ans1.innerText = "";
+			ans2.innerText = "";
+			ans3.innerText = "";
+			ans4.innerText = "";	
+			ans5.innerText = "";
+			ans6.innerText = "";	
+			ans7.innerText = "";
+			ans8.innerText = "";	
+			//				
+			ans_tech = [];
+			ans_desc = [];
+			ans_video1 = [];	
+			txt_results2.innerText = "";
+			//alert("end ClearData");				
+		}	
+
+		function FindDesc(i)
+		{
+			alert(ans_tech[i] + " --- " + ans_desc[i]);
+		}	
+
+		function FindVideo(i)
+		{
+			alert("ToDo: Video");
+		}		
+		
+		function HideAnswers()
+		{
+			document.getElementById("ans1").style.color = 'black';
+			document.getElementById("ans2").style.color = 'black';
+			document.getElementById("ans3").style.color = 'black';
+			document.getElementById("ans4").style.color = 'black';
+			document.getElementById("ans5").style.color = 'black';
+			document.getElementById("ans6").style.color = 'black';
+			document.getElementById("ans7").style.color = 'black';
+			document.getElementById("ans8").style.color = 'black';
+		}
+		
+		function ShowAnswers()
+		{
+			document.getElementById("ans1").style.color = 'white';
+			document.getElementById("ans2").style.color = 'white';
+			document.getElementById("ans3").style.color = 'white';
+			document.getElementById("ans4").style.color = 'white';
+			document.getElementById("ans5").style.color = 'white';
+			document.getElementById("ans6").style.color = 'white';
+			document.getElementById("ans7").style.color = 'white';
+			document.getElementById("ans8").style.color = 'white';			
+		}
+
+		/////////////////////////////////////////////////////////////
+		// Check Button Clicked
+		/////////////////////////////////////////////////////////////		
+
+		var element = document.getElementById("btn_check");
+		element.onclick = function (e) 
+		{
+			e.preventDefault();
+			//alert("preventDefault");
+			var btnText = document.getElementById("btn_check").innerHTML;
+			//alert(btnText);
+			if(btnText === "Check")
+			{
+				//alert("before CheckAnswers");
+				CheckAnswers();
+				//alert("before ShowAnswers");
+				ShowAnswers();
+				//alert("before Name ChangeCheckAnswers");
+				document.querySelector('#btn_check').innerHTML = 'Continue';
+			
+			}
+			else if (btnText === "Continue")
+			{
+				HideAnswers();
+				DoQuiz()
+				document.getElementById("btn_check").innerHTML  = "Check"
+			} 
+			else 
+			{
+				alert("Error 1");
+				location.reload();
+			}
+		}
+		
+		function CheckAnswers()
+		{
+			var correctcnt = 0;
+			var totalcnt = ans_tech.length;
+			
+			// Create array of responses
+			var user_responses = [];
+			user_responses.push(document.getElementById("tech1").value);
+			user_responses.push(document.getElementById("tech2").value);
+			user_responses.push(document.getElementById("tech3").value);
+			user_responses.push(document.getElementById("tech4").value);
+			user_responses.push(document.getElementById("tech5").value);
+			user_responses.push(document.getElementById("tech6").value);
+			user_responses.push(document.getElementById("tech7").value);
+			user_responses.push(document.getElementById("tech8").value);
+			
+			
+			//alert("before ans_cnt");
+			
+			for (let user_cnt = 0; user_cnt < 8; user_cnt++) 
+			{			
+				//alert("before user_cnt");
+				for (let ans_cnt = 0; ans_cnt < ans_tech.length; ans_cnt++) 
+				{
+					//alert(ans_cnt + "," + user_cnt);
+					if (user_responses[user_cnt] ===  ans_tech[ans_cnt])
+					{
+						//alert("PASS");
+						switch(user_cnt) 
+						{
+							case 0:
+								document.getElementById("tech1").style.color = 'black';
+								document.getElementById("tech1").style.backgroundColor = "#CEFFCE";
+								break;
+							case 1:
+								document.getElementById("tech2").style.color = 'black';
+								document.getElementById("tech2").style.backgroundColor = "#CEFFCE";
+								break;
+							case 2:
+								document.getElementById("tech3").style.color = 'black';
+								document.getElementById("tech3").style.backgroundColor = "#CEFFCE";
+								break;
+							case 3:
+								document.getElementById("tech4").style.color = 'black';
+								document.getElementById("tech4").style.backgroundColor = "#CEFFCE";
+								break;	
+							case 4:
+								document.getElementById("tech5").style.color = 'black';
+								document.getElementById("tech5").style.backgroundColor = "#CEFFCE";
+								break;
+							case 5:
+								document.getElementById("tech6").style.color = 'black';
+								document.getElementById("tech6").style.backgroundColor = "#CEFFCE";
+								break;
+							case 6:
+								document.getElementById("tech7").style.color = 'black';
+								document.getElementById("tech7").style.backgroundColor = "#CEFFCE";
+								break;
+							case 7:
+								document.getElementById("tech8").style.color = 'black';
+								document.getElementById("tech8").style.backgroundColor = "#CEFFCE";
+								break;					
+						}
+						correctcnt++;
+						//alert("PASS" + ans_tech[ans_cnt]+" " + ans_cnt + " = " + user_responses[input_cnt] + " " + input_cnt);
+						break;
+					}
+					else
+					{
+						//alert("FAIL");
+						switch(user_cnt) 
+						{
+							case 0:
+								document.getElementById("tech1").style.color = 'black';
+								document.getElementById("tech1").style.backgroundColor = "#FFC6C6";
+								break;
+							case 1:
+								document.getElementById("tech2").style.color = 'black';
+								document.getElementById("tech2").style.backgroundColor = "#FFC6C6";
+								break;
+							case 2:
+								document.getElementById("tech3").style.color = 'black';
+								document.getElementById("tech3").style.backgroundColor = "#FFC6C6";
+								break;
+							case 3:
+								document.getElementById("tech4").style.color = 'black';
+								document.getElementById("tech4").style.backgroundColor = "#FFC6C6";
+								break;	
+							case 4:
+								document.getElementById("tech5").style.color = 'black';
+								document.getElementById("tech5").style.backgroundColor = "#FFC6C6";
+								break;
+							case 5:
+								document.getElementById("tech6").style.color = 'black';
+								document.getElementById("tech6").style.backgroundColor = "#FFC6C6";
+								break;
+							case 6:
+								document.getElementById("tech7").style.color = 'black';
+								document.getElementById("tech7").style.backgroundColor = "#FFC6C6";
+								break;
+							case 7:
+								document.getElementById("tech8").style.color = 'black';
+								document.getElementById("tech8").style.backgroundColor = "#FFC6C6";
+								break;					
+						}
+						//alert("FAIL" + ans_tech[ans_cnt]+" " + ans_cnt + " = " + user_responses[input_cnt] + " " + input_cnt);							
+					}
+
+				}
+			}
+			//alert(correctcnt+"/"+totalcnt);
+			var results = correctcnt+"/"+totalcnt;
+			document.getElementById("txt_results2").innerHTML = results;
+			//alert(correctcnt+"/"+totalcnt);
+		}			
+
+		///////////////////////////// AUTOCOMPLETE ///////////////////////////////////
+		function autocomplete(inp, arr) 
+		{
+			/*the autocomplete function takes two arguments,
+			the text field element and an array of possible autocompleted values:*/
+			var currentFocus;
+			/*execute a function when someone writes in the text field:*/
+			inp.addEventListener("input", function(e) 
+			{
+				var a, b, i, val = this.value;
+				/*close any already open lists of autocompleted values*/
+				closeAllLists();
+				if (!val) 
+				{ 
+					return false;
+				}
+				currentFocus = -1;
+				/*create a DIV element that will contain the items (values):*/
+				a = document.createElement("DIV");
+				a.setAttribute("id", this.id + "autocomplete-list");
+				a.setAttribute("class", "autocomplete-items");
+				/*append the DIV element as a child of the autocomplete container:*/
+				this.parentNode.appendChild(a);
+				/*for each item in the array...*/
+				for (i = 0; i < arr.length; i++) 
+				{
+					/*check if the item starts with the same letters as the text field value:*/
+					if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) 
+					{
+						/*create a DIV element for each matching element:*/
+						b = document.createElement("DIV");
+						/*make the matching letters bold:*/
+						b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+						b.innerHTML += arr[i].substr(val.length);
+						/*insert a input field that will hold the current array item's value:*/
+						b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+						/*execute a function when someone clicks on the item value (DIV element):*/
+						b.addEventListener("click", function(e) 
+						{
+							/*insert the value for the autocomplete text field:*/
+							inp.value = this.getElementsByTagName("input")[0].value;
+							/*close the list of autocompleted values,
+							(or any other open lists of autocompleted values:*/
+							closeAllLists();
+						}	);
+						a.appendChild(b);
+					}
+				}
+			});
+			/*execute a function presses a key on the keyboard:*/
+			inp.addEventListener("keydown", function(e) 
+			{
+				var x = document.getElementById(this.id + "autocomplete-list");
+				if (x) x = x.getElementsByTagName("div");
+				if (e.keyCode == 40) 
+				{
+					/*If the arrow DOWN key is pressed,
+					increase the currentFocus variable:*/
+					currentFocus++;
+					/*and and make the current item more visible:*/
+					addActive(x);
+				} 
+				else if (e.keyCode == 38) 
+				{ //up
+					/*If the arrow UP key is pressed,
+					decrease the currentFocus variable:*/
+					currentFocus--;
+					/*and and make the current item more visible:*/
+					addActive(x);
+				} else if (e.keyCode == 13) 
+				{
+					/*If the ENTER key is pressed, prevent the form from being submitted,*/
+					e.preventDefault();
+					if (currentFocus > -1) 
+					{
+						/*and simulate a click on the "active" item:*/
+						if (x) x[currentFocus].click();
+					}
+				}
+			});
+		function addActive(x) 
+		{
+			/*a function to classify an item as "active":*/
+			if (!x) return false;
+			/*start by removing the "active" class on all items:*/
+			removeActive(x);
+			if (currentFocus >= x.length) currentFocus = 0;
+			if (currentFocus < 0) currentFocus = (x.length - 1);
+			/*add class "autocomplete-active":*/
+			x[currentFocus].classList.add("autocomplete-active");
+		}
+		function removeActive(x) 
+		{
+			/*a function to remove the "active" class from all autocomplete items:*/
+			for (var i = 0; i < x.length; i++) 
+			{
+				x[i].classList.remove("autocomplete-active");
+			}
+		}
+		function closeAllLists(elmnt) 
+		{
+			/*close all autocomplete lists in the document,
+			except the one passed as an argument:*/
+			var x = document.getElementsByClassName("autocomplete-items");
+			for (var i = 0; i < x.length; i++) 
+			{
+				if (elmnt != x[i] && elmnt != inp) 
+				{
+				x[i].parentNode.removeChild(x[i]);
+				}
+			}
+		}
+		/*execute a function when someone clicks in the document:*/
+		document.addEventListener("click", function (e) 
+		{
+			closeAllLists(e.target);
+		}	);
+		}
+		
+		autocomplete(document.getElementById("tech1"), dTechnique);
+		autocomplete(document.getElementById("tech2"), dTechnique);
+		autocomplete(document.getElementById("tech3"), dTechnique);
+		autocomplete(document.getElementById("tech4"), dTechnique);
+		autocomplete(document.getElementById("tech5"), dTechnique);
+		autocomplete(document.getElementById("tech6"), dTechnique);
+		autocomplete(document.getElementById("tech7"), dTechnique);
+		autocomplete(document.getElementById("tech8"), dTechnique);
+		
+			// add separation line before spacer
+			var sep = document.createElement("hr");
+			sep.style.backgroundColor = "#ffffff";
+			sep.style.width = "100%"; 
+			sep.style.height = "1px"; 
+			document.body.appendChild(sep); 		
+			
+			
+			// add separation from bottom of page
+			var box = document.createElement("div");
+			box.style.backgroundColor = "#000000";
+			box.style.width = "100%"; 
+			box.style.height = "100px"; 
+			document.body.appendChild(box); 	
+		
+	</script>	
+</html>

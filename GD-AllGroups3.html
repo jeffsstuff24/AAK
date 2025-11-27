@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>All Groups</title>
+	</head>     
+	<script src="Global.js"></script>	
+	<body>
+		<div id='Index' align="center"><a href="index.html">Back to Index</a></div>
+		<div id='docrev' style="text-align:center; margin:0 auto; color: #abb2b9; padding: 5px;">aak_rev</div> 		
+	
+		<div id='main_div' align="center">Loading ... </div>
+		
+		<div>	
+			<table align="center" style="margin: 0px auto; border-collapse: collapse;">
+				<tr style="color:black; font-size: 100px; border:0px solid black; background-color:rgb(255,255,255);">
+					<td id='spacer' style="border:0px solid black; text-align:center; padding:2px; width:280px; color:white;">hello</td>
+				</tr>					
+			</table>
+		</div>
+		<!-- ///////////////////////////////////////////////////// -->
+		<hr class="rounded">
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>				
+		
+	</body>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<script>
+	
+		document.getElementById("docrev").innerHTML = aak_rev;
+		/////////////////////////////////////////////////////////////
+		// COLLECT TECHNIQUE INFO FROM GOOGLE DRIVE
+		/////////////////////////////////////////////////////////////
+		
+		var dID = [];
+		var dRank = [];
+		var dTechnique = [];
+		var dAttack = [];
+		var dDescription = [];
+		var dExtension = [];
+		var dGroup = [];
+		var dCategory = [];
+		var dLink1 = [];
+		var dLink2 = [];
+
+		var dGroup_sorted = [];
+		var dCategory_sorted = [];		
+
+		var url = 'https://script.google.com/macros/s/AKfycbyTfeKSNmua39wZqx84Qb50JaemSyW5xqylqQXoKntUAFCyO2jaKMW7j-vPwCGYoRP3/exec';
+
+		$.ajax({
+			url: url,
+			dataType: "json",
+			success: function (data) 
+			{   
+				//console.log("25 -> " + JSON.stringify(data));
+				//console.log("26 -> " + data.data.length);
+				
+				for (var i=0; i<data.data.length; i++) 
+				{
+					
+					dID.push(data.data[i].ID);
+					dRank.push(data.data[i].Rank);
+					dTechnique.push(data.data[i].Technique);
+					dAttack.push(data.data[i].Attack);
+					dDescription.push(data.data[i].Description);
+					dGroup.push(data.data[i].Group);
+					dCategory.push(data.data[i].Category);
+					dLink1.push(data.data[i].Link1);
+					dLink2.push(data.data[i].Link2);
+					
+					dCategory_sorted.push(data.data[i].Category);
+					dGroup_sorted.push(data.data[i].Group);
+
+				}
+				
+				
+				//var divCategoryStyle = '<div style=\"text-align:center; width:280px; font-size: 20px; color:black;\">';
+				var divCategoryStyle = '<div style=\"border:1px solid black; background-color: RGB(226,239,218); text-align:center; width:100%; font-size: 20px; color:black;\">';
+				var divGroupStyle = '<div style=\"border:1px solid black; background-color: rgb(242,242,242); text-align:center; width:100%; font-size: 20px; color:black\">';
+				var divSpacerStyle = '<div style=\"border:1px solid black; background-color: rgb(242,242,242); text-align:center; width:50%; font-size: 4px; color:black\">';
+				var divAttckStyle = '<p></P><div style=\"text-align:center; width:280px; font-size: 24px; color:black\">';
+				var divTechniqueStyle = '<div style=\"text-align:center; width:280px; font-size: 20px; color: rgb(255,0,0)\">';
+				var divdescriptionStyle = '<div style=\"text-align:center; width:280px; font-size: 14px; color: black\">';
+				var divVideoStyle = '<div style=\"text-align:center; width:280px; font-size: 14px; color: black\">';
+				
+				/////////////////////////////////////////////////////////////
+				// Buyild the techniques listing base on category and group
+				/////////////////////////////////////////////////////////////
+
+				// Category - Remove duplicates
+				let c1 = dCategory_sorted.filter((item, index) => dCategory_sorted.indexOf(item) === index);
+				// Category - Sort
+				let c2 = c1.sort();
+				//console.log(c2);		
+				// Group - Remove duplicates
+				let g1 = dGroup_sorted.filter((item, index) => dGroup_sorted.indexOf(item) === index);
+				// Group - Sort
+				let g2 = g1.sort();	
+				//console.log(g2);		
+				
+				// Create category headers
+				var html1 = "";
+				var c_cnt = 0;
+				var g_cnt = 0;
+				var t_cnt = 0;
+				for (let i = 0; i < c2.length; i++) 
+				{
+					c_cnt = 0;
+					//////////////////////////////////////////////////////////
+					// Create category headers
+					//console.log("c2[i] = " + c2[i]);
+					if (c2[i] != null && c2[i] != "" && c2[i] != "x" && c2[i] != "X")
+					{			
+						//html1 += '<hr class="rounded">';
+						html1 += divCategoryStyle + '<p></p>' + c2[i] + '<p></p></div><p></p>';
+						//html1 += '<hr class="rounded">';
+					}
+					
+					//////////////////////////////////////////////////////////
+					// Create group headers within each category
+					for (let j = 0; j < g2.length; j++) 
+					{
+						if (g2[j] != null && g2[j] != "" && g2[j] != "x" && g2[j] != "X")
+						{							
+						
+							var cIndex = c2[i].indexOf(")");
+							var cSub = c2[i].substring(0, cIndex);
+							var cNum = Number(cSub);
+							var gIndex = g2[j].indexOf(")");
+							var gSub = g2[j].substring(0, gIndex);
+							var gNum = Number(gSub);
+							if (gNum > cNum && gNum < cNum+1)
+							{
+								g_cnt = 0;
+								// Create group headers
+								html1 += divGroupStyle + g2[j] + '</div><p></p>';
+								//html1 += '<hr class="rounded">';
+								
+								//////////////////////////////////////////////////////////
+								// Collect the techniques for each group
+
+								for (let k = 0; k < dGroup.length; k++) 
+								{
+
+									if (dGroup[k] === g2[j])
+									{
+										html1 = html1 + divAttckStyle + dAttack[k] + '</div>';
+										html1 = html1 + divTechniqueStyle + dTechnique[k] + '</div>';
+										//html1 = html1 + divTechniqueStyle + '(' + dRank[k] + ')   ' + dTechnique[k] + '</div>';
+										html1 = html1 + divdescriptionStyle + dDescription[k] + '</div>';
+										if (dLink1[k] != "")
+											html1 = html1 + divVideoStyle + "<a href='"+dLink1[k]+"'>Video</a>" + '</div>';
+										else
+											html1 = html1 + divVideoStyle + '-----</div>';
+											
+										html1 = html1 + '<p></p>' + divSpacerStyle + 'x</div><p></p>';
+										t_cnt++;
+									}
+								}			
+							
+							}
+						}
+			
+					}
+				}
+				document.getElementById("main_div").innerHTML = html1
+				document.getElementById("spacer").innerHTML = t_cnt.toString();				
+
+			},
+			error: function (err) 
+			{
+				console.log("ERROR: " + err.status);
+			}
+		});
+
+		// add separation from bootom of page
+		var box = document.createElement("div");
+		box.style.backgroundColor = "#eceae9";
+		box.style.width = "100%"; 
+		box.style.height = "100px"; 
+		document.body.appendChild(box); 
+	
+		
+	</script>
+</html>

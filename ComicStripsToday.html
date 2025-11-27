@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Comics - Today</title>
+	</head>     
+	<body>
+		<script src="Global.js"></script>
+		<div id='docrev' style="text-align:center; margin:0 auto; color: #abb2b9; padding: 5px;">aak_rev</div>
+		<div id='Index' align="center"><a href="index.html">Back to Index</a></div> 		
+		<hr class="rounded">		
+	</body>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<script>
+	
+		document.getElementById("docrev").innerHTML = aak_rev;
+		/////////////////////////////////////////////////////////////
+		// COLLECT TECHNIQUE INFO FROM GOOGLE DRIVE
+		/////////////////////////////////////////////////////////////
+		
+		const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+	
+		//////////////////////////////////////////////////////////
+		// Configure Date offset based on button press
+		//////////////////////////////////////////////////////////
+		
+		function GetTodayDate()
+		{
+			date = new Date();
+			date.setDate(date.getDate()-0);
+			GenerateLinks();
+		}
+		
+		GetTodayDate();
+
+		function GenerateLinks() 
+		{   
+			console.log("193");	
+						
+			const day = String(date.getDate()).padStart(2, '0');
+			const month = String(date.getMonth() + 1).padStart(2, '0'); // Month is 0-indexed
+			const year = date.getFullYear();
+			const headerDate  = `${month}/${day}`;
+			const dayOfWeek = days[date.getDay()];
+			console.log("202 = " + headerDate);
+			
+			const gocomicDate = `${year}/${month}/${day}`;
+			const kingdomDate = `${year}-${month}-${day}`;
+
+			for (var x=0; x<(BasePath.length)-1;x++) 
+			{     
+				var newDiv = document.createElement("div"); //Create div
+				newDiv.id = "div"+x.toString(); //Assign div id
+				
+				newDiv.setAttribute("style", "float:center; width:320px; line-height: 50px; text-align:center; font-size:20pt; height:50px; Margin: auto;"); //Set div attributes
+				/*newDiv.style.background =  "#FF0000";*/
+				
+				a = document.createElement('a');
+				if (BasePath[x].includes("kingdom"))
+				{
+					a.href =  BasePath[x]+'/'+kingdomDate;
+				}
+				else if (BasePath[x].includes("arcamax"))
+				{
+					a.href =  BasePath[x];
+				}
+				else
+				{
+					a.href =  BasePath[x]+'/'+gocomicDate;
+				}
+				a.innerHTML = BasePath[x+1];
+				console.log("138) x = " + x + "a = " + a);
+				newDiv.appendChild(a); // Append the link to the div
+				document.body.appendChild(newDiv); // And append the div to the document body
+				x++;
+			}
+			
+			// add separation line before spacer
+			var sep = document.createElement("hr");
+			sep.style.backgroundColor = "#000000";
+			sep.style.width = "100%"; 
+			sep.style.height = "1px"; 
+			document.body.appendChild(sep); 		
+			
+			
+			// add separation from bootom of page
+			var box = document.createElement("div");
+			box.style.backgroundColor = "#ffffff";
+			box.style.width = "100%"; 
+			box.style.height = "100px"; 
+			document.body.appendChild(box); 				
+			
+		}  
+		
+		console.log("END");
+		
+	
+	   
+	</script>	
+</html>
