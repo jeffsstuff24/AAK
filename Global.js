@@ -1,4 +1,4 @@
-var aak_rev = "251127-1739";
+var aak_rev = "251204-1245";
 
 var BasePath = [];
 initializeArray();
@@ -82,4 +82,5 @@ function initializeArray()
 	BasePath.push("https://comicskingdom.com/zits" ,"Zits");
 
 }
+
 
