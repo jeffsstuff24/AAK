@@ -44,6 +44,7 @@ function initializeArray()
 	BasePath.push("https://comicskingdom.com/hagar-the-horrible" ,"Hagar the Horrible");
 	BasePath.push("https://www.gocomics.com/herman" ,"Herman");	
 	BasePath.push("https://comicskingdom.com/hi-and-lois" ,"Hi and Lois");	
+	BasePath.push("https://comicskingdom.com/insanity-streak" ,"Insanity Streak");	
 	BasePath.push("https://www.gocomics.com/inthebleachers" ,"In the Bleachers");
 	BasePath.push("https://www.gocomics.com/lola" ,"Lola");	
 	BasePath.push("https://www.gocomics.com/looseparts" ,"Loose Parts");
@@ -79,6 +80,7 @@ function initializeArray()
 	BasePath.push("https://comicskingdom.com/zits" ,"Zits");
 
 }
+
 
 
 
