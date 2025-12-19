@@ -11,7 +11,6 @@ function initializeArray()
 {
 	BasePath = [];
 	BasePath.push("https://www.gocomics.com/9to5","9 to 5");	
-	BasePath.push("https://www.gocomics.com/adamathome","Adam@home");
 	BasePath.push("https://www.gocomics.com/andertoons" ,"Andertoons");
 	BasePath.push("https://www.arcamax.com/thefunnies/archie" ,"Archie");
 	BasePath.push("https://www.gocomics.com/baldo" ,"Baldo");
@@ -80,6 +79,7 @@ function initializeArray()
 	BasePath.push("https://comicskingdom.com/zits" ,"Zits");
 
 }
+
 
 
 
