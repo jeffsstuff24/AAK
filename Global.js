@@ -1,4 +1,4 @@
-var aak_rev = "260101-1547";
+var aak_rev = "260107-1206";
 
 var BasePath = [];
 initializeArray();
@@ -33,11 +33,9 @@ function initializeArray()
 	BasePath.push("https://comicskingdom.com/dustin" ,"Dustin");
 	BasePath.push("https://comicskingdom.com/family-circus" ,"Family Circus");
 	BasePath.push("https://www.gocomics.com/familytree" ,"Family Tree");
-	BasePath.push("https://www.gocomics.com/farcus" ,"Farcus");
 	BasePath.push("https://www.gocomics.com/forbetterorforworse" ,"For Better or Worse");
 	BasePath.push("https://www.gocomics.com/foxtrot" ,"FoxTrot");
 	BasePath.push("https://www.gocomics.com/foxtrotclassics" ,"Foxtrot Classics");
-	BasePath.push("https://www.gocomics.com/freshlysqueezed" ,"Freshly Squeezed");
 	BasePath.push("https://www.gocomics.com/funky-winkerbean","Funky Winkerbean");
 	BasePath.push("https://www.gocomics.com/grand-avenue" ,"Grand Avenue");	
 	BasePath.push("https://www.gocomics.com/gray-matters","Gray Matters");
@@ -51,7 +49,6 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/luann" ,"Luann");	
 	BasePath.push("https://www.gocomics.com/luann-againn" ,"Luann Again");	
 	BasePath.push("https://www.gocomics.com/moderately-confused" ,"Moderately Confused");
-	BasePath.push("https://www.arcamax.com/thefunnies/mutts" ,"Mutts");
 	BasePath.push("https://www.gocomics.com/nonsequitur" ,"non Sequitur");	
 	BasePath.push("https://www.gocomics.com/offthemark" ,"Off the Mark");
 	BasePath.push("https://comicskingdom.com/pajama-diaries", "Pajama Diaries");
@@ -82,6 +79,7 @@ function initializeArray()
 	BasePath.push("https://comicskingdom.com/zits" ,"Zits");
 
 }
+
 
 
 
