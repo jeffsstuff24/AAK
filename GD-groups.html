@@ -192,12 +192,7 @@
 			</div>
 			<!-- ///////////////////////////////////////////////////// -->
 
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>				
+			<div id="snackbar">Some text some message..</div>	
 		
 		</form>
 	</body>
@@ -421,7 +416,12 @@
 
 		function FindDesc(i)
 		{
-			alert(ans_tech[i] + " --- " + ans_desc[i]);
+			var x = document.getElementById("snackbar");
+			x.innerHTML = ans_tech[i] + " --- " + ans_desc[i];
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+			
+			//alert(ans_tech[i] + " --- " + ans_desc[i]);
 		}	
 
 		function FindVideo(i)
