@@ -1,35 +1,115 @@
 <!DOCTYPE html>
-<title>Example</title>
-<style>
-  body {
-    background-image: url('/pix/samples/bg1.gif');
-  }
-  main {
-    margin-bottom: 200%;
-  }
-  .floating-menu {
-    font-family: sans-serif;
-    background: yellowgreen;
-    padding: 5px;;
-    width: 130px;
-    z-index: 100;
-    position: fixed;
-  }
-  .floating-menu a, 
-  .floating-menu h3 {
-    font-size: 0.9em;
-    display: block;
-    margin: 0 0.5em;
-    color: white;
-  }
-</style>
-<main>
-  <p>Scroll down and watch the menu remain fixed in the same position, as though it was floating.</p>
-  <nav class="floating-menu">
-    <h3>Floating Menu</h3>
-    <a href="/css/">CSS</a>
-    <a href="/html/">HTML</a>
-    <a href="/coldfusion/">ColdFusion</a>
-    <a href="/database/">Database</a>
-  </nav>
-</main>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchor Link: Fancier Styling</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px 20px 100vh;
+        color: #225b6e;
+        background-image: linear-gradient(#fff0d6, #e1ede8 50%);
+        font: 700 1.5rem/1 'Roboto', sans-serif;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      p {
+        line-height: 1.25;
+      }
+
+      a {
+        padding: 10px;
+        border-radius: 10px;
+        color: #fff;
+        background-color: #f23d70;
+        text-decoration: none;
+      }
+
+      nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      nav a {
+        flex-grow: 1;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0 0 20px;
+        scroll-margin-top: 40px;
+      }
+
+      h1:target {
+        color: #71a819;
+      }
+
+      article {
+        margin-top: 60px;
+        padding: 20px;
+        border: 3px solid transparent;
+        border-radius: 10px;
+        background-color: #fffc;
+      }
+
+      article:has(h1:target) {
+        border-color: #71a819;
+      }
+
+      .back-to-top {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        opacity: 0;
+        translate: calc(100% + 10px);
+        transition: all 0.5s;
+      }
+
+      body:has(h1:target) .back-to-top {
+        opacity: 1;
+        translate: 0px;
+      }
+  </style>
+  </head>
+  <body>
+    <main>
+      <p>Which fruit do you want to learn about?</p>
+      <nav>
+        <a href="#kiwis">Kiwis</a>
+        <a href="#limes">Limes</a>
+        <a href="#pears">Pears</a>
+      </nav>
+    
+      <article>
+        <h1 id="kiwis">Kiwis</h1>
+        <p>Kiwis (the fruit) are native to China and were originally called Chinese gooseberries. They grow on vines. 98% of kiwis grown in the US are grown in California.</p>
+      </article>
+    
+      <article>
+        <h1 id="limes">Limes</h1>
+        <p>Limes are a citrus fruit. They are valued for the acidity of their juice and are often used in Mexican, Vietnamese, and Thai dishes. Limes are also often used in cocktails.</p>
+      </article>
+    
+      <article>
+        <h1 id="pears">Pears</h1>
+        <p>Pears are pear-shaped. They should not operate heavy machinery, as they are a fruit and not sentient and do not have arms. Also, apparently pear flavored coffee is a thing.</p>
+      </article>
+    
+      <a class="back-to-top" href="#top">Back to top</a>
+    </main>    
+  </body>
+</html>
