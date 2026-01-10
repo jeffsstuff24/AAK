@@ -1,4 +1,4 @@
-var aak_rev = "260110-1640";
+var aak_rev = "260110-1647";
 
 var BasePath = [];
 initializeArray();
@@ -81,6 +81,7 @@ function initializeArray()
 }
 
 console.log("global done");
+
 
 
 
