@@ -1,4 +1,4 @@
-var aak_rev = "260113-1413";
+var aak_rev = "260116-0813";
 
 var BasePath = [];
 initializeArray();
@@ -11,8 +11,10 @@ function initializeArray()
 {
 	BasePath = [];
 	BasePath.push("https://www.gocomics.com/9to5","9 to 5");	
+	BasePath.push("https://www.gocomics.com/amanda-the-great","Amanda the Great");
 	BasePath.push("https://www.gocomics.com/andertoons" ,"Andertoons");
 	BasePath.push("https://www.arcamax.com/thefunnies/archie" ,"Archie");
+	BasePath.push("https://www.gocomics.com/arloandjanis","Arlo and Janis");
 	BasePath.push("https://www.gocomics.com/babyblues", "Baby Blues");
 	BasePath.push("https://www.gocomics.com/baldo" ,"Baldo");
 	BasePath.push("https://www.gocomics.com/bc" ,"B.C.");
@@ -26,11 +28,13 @@ function initializeArray()
 	BasePath.push("https://comicskingdom.com/brilliant-mind-of-edison-lee" ,"Brilliant Mind of Edison");
 	BasePath.push("https://www.gocomics.com/calvinandhobbes" ,"Calvin and Hobbes");
 	BasePath.push("https://www.gocomics.com/closetohome" ,"Close to Home");
+	BasePath.push("https://www.gocomics.com/crabgrass","Crabgrass");
 	BasePath.push("https://www.gocomics.com/crankshaft" ,"Crankshaft");
 	BasePath.push("https://comicskingdom.com/crock" ,"Crock");
 	BasePath.push("https://comicskingdom.com/dennis-the-menace" ,"Denise the Menace");
 	BasePath.push("https://www.gocomics.com/drabble" ,"drabble");
 	BasePath.push("https://comicskingdom.com/dustin" ,"Dustin");
+	BasePath.push("https://www.gocomics.com/edge-city","Edge City");
 	BasePath.push("https://comicskingdom.com/family-circus" ,"Family Circus");
 	BasePath.push("https://www.gocomics.com/familytree" ,"Family Tree");
 	BasePath.push("https://www.gocomics.com/forbetterorforworse" ,"For Better or Worse");
@@ -61,12 +65,10 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/ripleysbelieveitornot" ,"Ripley's Believe It or Not");	
 	BasePath.push("https://comicskingdom.com/rhymes-with-orange", "Ryhmes with Orange");
 	BasePath.push("https://www.arcamax.com/thefunnies/rubes" ,"Rubes");
-	BasePath.push("https://www.gocomics.com/shirley-and-son-classics" ,"Shirley and Son Classics");
 	BasePath.push("https://comicskingdom.com/shoe" ,"Shoe");
 	BasePath.push("https://www.gocomics.com/speedbump" ,"Speed Bump");
 	BasePath.push("https://www.gocomics.com/stonesoup" ,"Stone Soup");
 	BasePath.push("https://www.gocomics.com/strangebrew" ,"Strange Brew");	
-	BasePath.push("https://www.arcamax.com/thefunnies/takeitfromthetinkersons" ,"Tinkersons");	
 	BasePath.push("https://www.gocomics.com/the-born-loser" ,"The Born Loser");
 	BasePath.push("https://www.gocomics.com/theflyingmccoys" ,"The Flying McCoys");
 	BasePath.push("https://www.gocomics.com/lockhorns" ,"The Lockhorns");
@@ -81,6 +83,7 @@ function initializeArray()
 }
 
 console.log("global done");
+
 
 
 
