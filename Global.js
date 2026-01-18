@@ -10,7 +10,10 @@ initializeArray();
 function initializeArray()
 {
 	BasePath = [];
+	BasePath.push("https://www.gocomics.com/9-chickweed-lane","9 Chickweed Lane");
 	BasePath.push("https://www.gocomics.com/9to5","9 to 5");	
+	BasePath.push("https://www.gocomics.com/aj-and-magnus","AJ and Magnus");
+	BasePath.push("https://www.gocomics.com/alley-oop","Allye Oop");
 	BasePath.push("https://www.gocomics.com/amanda-the-great","Amanda the Great");
 	BasePath.push("https://www.gocomics.com/andertoons" ,"Andertoons");
 	BasePath.push("https://www.arcamax.com/thefunnies/archie" ,"Archie");
@@ -23,8 +26,10 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/ben" ,"Ben");
 	BasePath.push("https://www.gocomics.com/betty","Betty");
 	BasePath.push("https://comicskingdom.com/blondie" ,"Blondie");
+	BasePath.push("https://www.gocomics.com/bobthesquirrel","Bob the Squirrel");
 	BasePath.push("https://www.gocomics.com/boomerangs","Boomerangs");
 	BasePath.push("https://www.gocomics.com/bottomliners" ,"Bottomliners");
+	BasePath.push("https://www.gocomics.com/brevity","Brevity");
 	BasePath.push("https://comicskingdom.com/brilliant-mind-of-edison-lee" ,"Brilliant Mind of Edison");
 	BasePath.push("https://www.gocomics.com/calvinandhobbes" ,"Calvin and Hobbes");
 	BasePath.push("https://www.gocomics.com/closetohome" ,"Close to Home");
@@ -83,6 +88,7 @@ function initializeArray()
 }
 
 console.log("global done");
+
 
 
 
