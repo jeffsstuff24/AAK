@@ -1,4 +1,4 @@
-var aak_rev = "260118-1246";
+var aak_rev = "260121-1216";
 
 var BasePath = [];
 initializeArray();
@@ -13,7 +13,6 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/9-chickweed-lane","9 Chickweed Lane");
 	BasePath.push("https://www.gocomics.com/9to5","9 to 5");	
 	BasePath.push("https://www.gocomics.com/aj-and-magnus","AJ and Magnus");
-	BasePath.push("https://www.gocomics.com/alley-oop","Allye Oop");
 	BasePath.push("https://www.gocomics.com/amanda-the-great","Amanda the Great");
 	BasePath.push("https://www.gocomics.com/andertoons" ,"Andertoons");
 	BasePath.push("https://www.arcamax.com/thefunnies/archie" ,"Archie");
@@ -26,16 +25,20 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/ben" ,"Ben");
 	BasePath.push("https://www.gocomics.com/betty","Betty");
 	BasePath.push("https://comicskingdom.com/blondie" ,"Blondie");
-	BasePath.push("https://www.gocomics.com/bobthesquirrel","Bob the Squirrel");
 	BasePath.push("https://www.gocomics.com/boomerangs","Boomerangs");
 	BasePath.push("https://www.gocomics.com/bottomliners" ,"Bottomliners");
 	BasePath.push("https://www.gocomics.com/brevity","Brevity");
+	BasePath.push("https://www.gocomics.com/thebuckets", "The Buckets");
 	BasePath.push("https://comicskingdom.com/brilliant-mind-of-edison-lee" ,"Brilliant Mind of Edison");
 	BasePath.push("https://www.gocomics.com/calvinandhobbes" ,"Calvin and Hobbes");
+	BasePath.push("https://www.gocomics.com/cathy", "Cathy");
+	BasePath.push("https://www.gocomics.com/chucklebros","Chuckle Bros");
 	BasePath.push("https://www.gocomics.com/closetohome" ,"Close to Home");
+	BasePath.push("https://www.gocomics.com/cornered","Cornered");
 	BasePath.push("https://www.gocomics.com/crabgrass","Crabgrass");
 	BasePath.push("https://www.gocomics.com/crankshaft" ,"Crankshaft");
 	BasePath.push("https://comicskingdom.com/crock" ,"Crock");
+	BasePath.push("https://www.gocomics.com/daddyshome", "Daddy's Home");
 	BasePath.push("https://comicskingdom.com/dennis-the-menace" ,"Denise the Menace");
 	BasePath.push("https://www.gocomics.com/drabble" ,"drabble");
 	BasePath.push("https://comicskingdom.com/dustin" ,"Dustin");
@@ -46,6 +49,7 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/foxtrot" ,"FoxTrot");
 	BasePath.push("https://www.gocomics.com/foxtrotclassics" ,"Foxtrot Classics");
 	BasePath.push("https://www.gocomics.com/funky-winkerbean","Funky Winkerbean");
+	BasePath.push("https://www.gocomics.com/gingermeggs","Ginger Meggs");
 	BasePath.push("https://www.gocomics.com/grand-avenue" ,"Grand Avenue");	
 	BasePath.push("https://www.gocomics.com/gray-matters","Gray Matters");
 	BasePath.push("https://comicskingdom.com/hagar-the-horrible" ,"Hagar the Horrible");
@@ -58,8 +62,10 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/luann" ,"Luann");	
 	BasePath.push("https://www.gocomics.com/luann-againn" ,"Luann Again");	
 	BasePath.push("https://www.gocomics.com/moderately-confused" ,"Moderately Confused");
+	BasePath.push("https://www.gocomics.com/next-door-neighbors", "Next Door Neighbors");
 	BasePath.push("https://www.gocomics.com/nonsequitur" ,"non Sequitur");	
 	BasePath.push("https://www.gocomics.com/offthemark" ,"Off the Mark");
+	BasePath.push("https://www.gocomics.com/onaclaireday", "On A Claire Day");
 	BasePath.push("https://comicskingdom.com/pajama-diaries", "Pajama Diaries");
 	BasePath.push("https://comicskingdom.com/pardon-my-planet" ,"Pardon My Planet");
 	BasePath.push("https://www.gocomics.com/peanuts" ,"Peanuts");
@@ -88,6 +94,7 @@ function initializeArray()
 }
 
 console.log("global done");
+
 
 
 
