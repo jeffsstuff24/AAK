@@ -1,4 +1,4 @@
-var aak_rev = "260121-1216";
+var aak_rev = "260123-1329";
 
 var BasePath = [];
 initializeArray();
@@ -13,7 +13,6 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/9-chickweed-lane","9 Chickweed Lane");
 	BasePath.push("https://www.gocomics.com/9to5","9 to 5");	
 	BasePath.push("https://www.gocomics.com/aj-and-magnus","AJ and Magnus");
-	BasePath.push("https://www.gocomics.com/amanda-the-great","Amanda the Great");
 	BasePath.push("https://www.gocomics.com/andertoons" ,"Andertoons");
 	BasePath.push("https://www.arcamax.com/thefunnies/archie" ,"Archie");
 	BasePath.push("https://www.gocomics.com/arloandjanis","Arlo and Janis");
@@ -39,16 +38,22 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/crankshaft" ,"Crankshaft");
 	BasePath.push("https://comicskingdom.com/crock" ,"Crock");
 	BasePath.push("https://www.gocomics.com/daddyshome", "Daddy's Home");
+	BasePath.push("https://www.gocomics.com/deflocked" ,"Deflocked");
 	BasePath.push("https://comicskingdom.com/dennis-the-menace" ,"Denise the Menace");
 	BasePath.push("https://www.gocomics.com/drabble" ,"drabble");
 	BasePath.push("https://comicskingdom.com/dustin" ,"Dustin");
 	BasePath.push("https://www.gocomics.com/edge-city","Edge City");
 	BasePath.push("https://comicskingdom.com/family-circus" ,"Family Circus");
 	BasePath.push("https://www.gocomics.com/familytree" ,"Family Tree");
+	BasePath.push("https://www.gocomics.com/floandfriends" ,"Flo And Friends");
+	BasePath.push("https://www.gocomics.com/fminus" ,"F-Minus");
 	BasePath.push("https://www.gocomics.com/forbetterorforworse" ,"For Better or Worse");
 	BasePath.push("https://www.gocomics.com/foxtrot" ,"FoxTrot");
 	BasePath.push("https://www.gocomics.com/foxtrotclassics" ,"Foxtrot Classics");
+	BasePath.push("https://www.gocomics.com/frank-and-ernest" ,"Fran and Earnest");
+	BasePath.push("https://www.gocomics.com/frazz" ,"Frazz");
 	BasePath.push("https://www.gocomics.com/funky-winkerbean","Funky Winkerbean");
+	BasePath.push("https://www.gocomics.com/thefuscobrothers" ,"The Fusco Brothers");
 	BasePath.push("https://www.gocomics.com/gingermeggs","Ginger Meggs");
 	BasePath.push("https://www.gocomics.com/grand-avenue" ,"Grand Avenue");	
 	BasePath.push("https://www.gocomics.com/gray-matters","Gray Matters");
@@ -94,6 +99,7 @@ function initializeArray()
 }
 
 console.log("global done");
+
 
 
 
