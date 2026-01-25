@@ -5,7 +5,13 @@
 		
 		<title>AAK - Groups</title>
 		<style>
-		
+			<!-- ///////////////////////////////////////////////////// -->
+			.modal-dialog 
+			{
+			  width: auto;
+			  max-width: 960px; // Optional, maximum width
+			}	
+			<!-- ///////////////////////////////////////////////////// -->
 			h2 {text-align: center;}
 			div {text-align: center;}
 		
@@ -236,10 +242,45 @@
 			</div>
 			<!-- ///////////////////////////////////////////////////// -->
 
-			<div id="snackbar">Some text some message..</div>	
+			<!-- Modal HTML -->
+			<div id="myModal" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>				
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe id="AAKVideo" width="640" height="360" frameborder="0" src="https://mega.nz/embed/bsBgXC4D#6VXk3n39y_37OZ2Mv85bwm8RRVnh7PbKPLWvOlSDomA" allowfullscreen ></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		
 		</form>
 	</body>
+	<!-- Modal Dialog Box -->
+	<script>
+		$(document).ready(function(){
+			/* Get iframe src attribute value i.e. YouTube video url
+			and store it in a variable */
+			var url = $("#AAKVideo").attr('src');
+			
+			/* Assign empty url value to the iframe src attribute when
+			modal hide, which stop the video playing */
+			$("#myModal").on('hide.bs.modal', function(){
+				$("#AAKVideo").attr('src', '');
+			});
+			
+			/* Assign the initially stored url back to the iframe src
+			attribute when modal is displayed again */
+			$("#myModal").on('show.bs.modal', function(){
+				$("#AAKVideo").attr('src', url);
+			});
+		});
+	</script>
+	<!-- ----------- -->
 	
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
