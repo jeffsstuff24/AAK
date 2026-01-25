@@ -23,16 +23,6 @@
 				<!-- background-image: linear-gradient(white, blue); -->
 			}
 
-
-			<!-- ///////////////////////////////////////////////////// -->
-			<!-- //////////////////SNACKBAR/////////////////////////// -->
-			<!-- ///////////////////////////////////////////////////// -->
-				
-			.modal-dialog 
-			{
-			  width: auto;
-			  max-width: 960px; // Optional, maximum width
-			}
 			<!-- ///////////////////////////////////////////////////// -->
 			<!-- //////////////////SNACKBAR/////////////////////////// -->
 			<!-- ///////////////////////////////////////////////////// -->
@@ -245,35 +235,8 @@
 				<p style="font-size: 16px; color: white;" id="txt_results2"></p>
 			</div>
 			<!-- ///////////////////////////////////////////////////// -->
-			<!-- Modal HTML -->
-			<div id="myModal" class="modal fade">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-body">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-							</div>				
-							<div>
-								<iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/bsBgXC4D#6VXk3n39y_37OZ2Mv85bwm8RRVnh7PbKPLWvOlSDomA" allowfullscreen ></iframe>
-							</div>
-							<!--
-								<iframe id="cartoonVideo" class="embed-responsive-item"
-							src="https://mega.nz/file/mgBX2QJC#vjtpOGItetlEAFaulUFGe_4uxnmQUbL3bt2rHo_Xxv8" allowfullscreen>								
-							</iframe>	
-								
-							<div>
-								<iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/bsBgXC4D#6VXk3n39y_37OZ2Mv85bwm8RRVnh7PbKPLWvOlSDomA" allowfullscreen ></iframe>
-							</div>
-							<div
-								<iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/axhEiBLA#LRSopTSUJ36Xsb3wwJwJiSsoFQrWFZ0dslibGA81s4A" allowfullscreen ></iframe>
-							</div>
-							-->
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> 
+			<div id="snackbar">Some text some message..</div>	
 		
 		</form>
 	</body>
@@ -283,24 +246,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 	<script>
-		////////////// MODAL DIALOG /////////////////////////////
-		$(document).ready(function(){
-		/* Get iframe src attribute value i.e. YouTube video url
-		and store it in a variable */
-		var url = $("#cartoonVideo").attr('src');
-		
-		/* Assign empty url value to the iframe src attribute when
-		modal hide, which stop the video playing */
-		$("#myModal").on('hide.bs.modal', function(){
-			$("#cartoonVideo").attr('src', '');
-		});
-		
-		/* Assign the initially stored url back to the iframe src
-		attribute when modal is displayed again */
-		$("#myModal").on('show.bs.modal', function(){
-			$("#cartoonVideo").attr('src', url);
-		});
-	});
+	
 		
 		document.getElementById("docrev").innerHTML = aak_rev;
 		/////////////////////////////////////////////////////////////
