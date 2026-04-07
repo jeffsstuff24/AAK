@@ -278,7 +278,17 @@
 		
 		navigator.wakeLock.request('screen');
 
-		var url = 'https://script.google.com/macros/s/AKfycbyTfeKSNmua39wZqx84Qb50JaemSyW5xqylqQXoKntUAFCyO2jaKMW7j-vPwCGYoRP3/exec';
+		// https://www.bpwebs.com/how-to-display-google-sheets-data-on-a-website/
+		// 1) Open your Google Sheet.
+		// 2) Click Extensions > Apps Script in your Google Sheets Menu to get started.
+		// 3) Copy script code.
+		// 4) Click on “Deploy” > “New deployment“.
+		// 5) Select “Web app” as the type.
+		// 6) Set “Execute as” to your account and “Who has access” to “Anyone“.
+		// 7) Click “Deploy” and authorize the app when prompted.
+		// 8) Copy the provided Web app URL. This is your JSON endpoint.		
+		
+		var url = 'https://script.google.com/macros/s/AKfycbz4VLAzAw-mtE8auvEB-tXvAcPFcO-jnzV48aMRRTQqidYe9Ig6Tdt2cJU8EfRJCrPt/exec';
 
 		$.ajax({
 			url: url,
