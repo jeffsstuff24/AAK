@@ -1,4 +1,4 @@
-var aak_rev = "260413-0812";
+var aak_rev = "260420-0824";
 
 var BasePath = [];
 initializeArray();
@@ -55,23 +55,16 @@ function initializeArray()
 	BasePath.push("https://comicskingdom.com/hi-and-lois" ,"Hi and Lois");	
 	BasePath.push("https://comicskingdom.com/intelligent","Intelligent Life");
 	BasePath.push("https://comicskingdom.com/insanity-streak" ,"Insanity Streak");	
-	BasePath.push("https://www.gocomics.com/in-security","In Security");
 	BasePath.push("https://www.gocomics.com/inthebleachers" ,"In the Bleachers");
 	BasePath.push("https://www.gocomics.com/jerry-king-comics","Jerry King Comics");
-	BasePath.push("https://comicskingdom.com/kirk-walters","kirk Walters");
 	BasePath.push("https://www.gocomics.com/lacucaracha","La Cucaracha");
-	BasePath.push("https://comicskingdom.com/legend-of-bill","Legend of Bill");
 	BasePath.push("https://www.gocomics.com/lola" ,"Lola");	
 	BasePath.push("https://www.gocomics.com/looseparts" ,"Loose Parts");
 	BasePath.push("https://www.gocomics.com/luann" ,"Luann");	
 	BasePath.push("https://www.gocomics.com/luann-againn" ,"Luann Again");	
 	BasePath.push("https://comicskingdom.com/marvin","Marvin");
-	BasePath.push("https://comicskingdom.com/mike-smith","Mike Smith");
 	BasePath.push("https://www.gocomics.com/moderately-confused" ,"Moderately Confused");
-	BasePath.push("https://comicskingdom.com/mostly-gravy","Mostly Gravy");
-	BasePath.push("https://www.gocomics.com/next-door-neighbors", "Next Door Neighbors");
 	BasePath.push("https://www.gocomics.com/nonsequitur" ,"non Sequitur");	
-	BasePath.push("https://comicskingdom.com/oddly-enough","Oddly Enough");
 	BasePath.push("https://www.gocomics.com/offthemark" ,"Off the Mark");
 	BasePath.push("https://www.gocomics.com/onaclaireday", "On A Claire Day");
 	BasePath.push("https://comicskingdom.com/pajama-diaries", "Pajama Diaries");
