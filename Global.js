@@ -1,4 +1,4 @@
-var aak_rev = "260420-0824";
+var aak_rev = "260430-1121";
 
 var BasePath = [];
 initializeArray();
@@ -51,9 +51,7 @@ function initializeArray()
 	BasePath.push("https://comicskingdom.com/hagar-the-horrible" ,"Hagar the Horrible");
 	BasePath.push("https://www.gocomics.com/herman" ,"Herman");	
 	BasePath.push("https://www.gocomics.com/homeandaway","Home and Away");
-	BasePath.push("https://www.gocomics.com/humble-stumble","Humble Stumble");
 	BasePath.push("https://comicskingdom.com/hi-and-lois" ,"Hi and Lois");	
-	BasePath.push("https://comicskingdom.com/intelligent","Intelligent Life");
 	BasePath.push("https://comicskingdom.com/insanity-streak" ,"Insanity Streak");	
 	BasePath.push("https://www.gocomics.com/inthebleachers" ,"In the Bleachers");
 	BasePath.push("https://www.gocomics.com/jerry-king-comics","Jerry King Comics");
