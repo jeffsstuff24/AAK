@@ -1,4 +1,4 @@
-var aak_rev = "260430-1121";
+var aak_rev = "260527-1200";
 
 var BasePath = [];
 initializeArray();
@@ -44,6 +44,7 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/foxtrot" ,"FoxTrot");
 	BasePath.push("https://www.gocomics.com/foxtrotclassics" ,"Foxtrot Classics");
 	BasePath.push("https://www.gocomics.com/frazz" ,"Frazz");
+	BasePath.push("https://www.arcamax.com/thefunnies/freerange","Free Range");
 	BasePath.push("https://www.gocomics.com/funky-winkerbean","Funky Winkerbean");
 	BasePath.push("https://www.gocomics.com/gingermeggs","Ginger Meggs");
 	BasePath.push("https://www.gocomics.com/grand-avenue" ,"Grand Avenue");	
@@ -55,7 +56,6 @@ function initializeArray()
 	BasePath.push("https://comicskingdom.com/insanity-streak" ,"Insanity Streak");	
 	BasePath.push("https://www.gocomics.com/inthebleachers" ,"In the Bleachers");
 	BasePath.push("https://www.gocomics.com/jerry-king-comics","Jerry King Comics");
-	BasePath.push("https://www.gocomics.com/lacucaracha","La Cucaracha");
 	BasePath.push("https://www.gocomics.com/lola" ,"Lola");	
 	BasePath.push("https://www.gocomics.com/looseparts" ,"Loose Parts");
 	BasePath.push("https://www.gocomics.com/luann" ,"Luann");	
@@ -65,6 +65,7 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/nonsequitur" ,"non Sequitur");	
 	BasePath.push("https://www.gocomics.com/offthemark" ,"Off the Mark");
 	BasePath.push("https://www.gocomics.com/onaclaireday", "On A Claire Day");
+	BasePath.push("https://www.gocomics.com/onebighappy","One Big Happy");
 	BasePath.push("https://comicskingdom.com/pajama-diaries", "Pajama Diaries");
 	BasePath.push("https://comicskingdom.com/pardon-my-planet" ,"Pardon My Planet");
 	BasePath.push("https://www.gocomics.com/peanuts" ,"Peanuts");
@@ -76,6 +77,7 @@ function initializeArray()
 	BasePath.push("https://comicskingdom.com/rhymes-with-orange", "Ryhmes with Orange");
 	BasePath.push("https://www.arcamax.com/thefunnies/rubes" ,"Rubes");
 	BasePath.push("https://comicskingdom.com/shoe" ,"Shoe");
+	BasePath.push("https://www.arcamax.com/thefunnies/spectickles","Spectickles");
 	BasePath.push("https://www.gocomics.com/speedbump" ,"Speed Bump");
 	BasePath.push("https://www.gocomics.com/stonesoup" ,"Stone Soup");
 	BasePath.push("https://www.gocomics.com/strangebrew" ,"Strange Brew");	
