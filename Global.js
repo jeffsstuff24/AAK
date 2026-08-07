@@ -1,4 +1,4 @@
-var aak_rev = "260707-1210";
+var aak_rev = "260807-0958";
 
 var BasePath = [];
 initializeArray();
@@ -10,7 +10,8 @@ initializeArray();
 function initializeArray()
 {
 	BasePath = [];
-	BasePath.push("https://www.gocomics.com/9to5","9 to 5");	
+	BasePath.push("https://www.gocomics.com/9to5","9 to 5");
+	BasePath.push("https://www.gocomics.com/agnes","Agnes");
 	BasePath.push("https://www.gocomics.com/andertoons" ,"Andertoons");
 	BasePath.push("https://www.arcamax.com/thefunnies/archie" ,"Archie");
 	BasePath.push("https://www.gocomics.com/babyblues", "Baby Blues");
@@ -45,7 +46,6 @@ function initializeArray()
 	BasePath.push("https://www.gocomics.com/forbetterorforworse" ,"For Better or Worse");
 	BasePath.push("https://www.gocomics.com/foxtrot" ,"FoxTrot");
 	BasePath.push("https://www.gocomics.com/foxtrotclassics" ,"Foxtrot Classics");
-	BasePath.push("https://www.gocomics.com/frazz" ,"Frazz");
 	BasePath.push("https://www.arcamax.com/thefunnies/freerange","Free Range");
 	BasePath.push("https://www.gocomics.com/funky-winkerbean","Funky Winkerbean");
 	BasePath.push("https://www.gocomics.com/gingermeggs","Ginger Meggs");
@@ -65,9 +65,9 @@ function initializeArray()
 	BasePath.push("https://comicskingdom.com/marvin","Marvin");
 	BasePath.push("https://www.gocomics.com/moderately-confused" ,"Moderately Confused");
 	BasePath.push("https://www.gocomics.com/nonsequitur" ,"non Sequitur");	
+	BasePath.push("https://www.gocomics.com/thenorm","The Norm Classics");
 	BasePath.push("https://www.gocomics.com/offthemark" ,"Off the Mark");
 	BasePath.push("https://www.gocomics.com/onaclaireday", "On A Claire Day");
-	BasePath.push("https://www.gocomics.com/onebighappy","One Big Happy");
 	BasePath.push("https://comicskingdom.com/pajama-diaries", "Pajama Diaries");
 	BasePath.push("https://comicskingdom.com/pardon-my-planet" ,"Pardon My Planet");
 	BasePath.push("https://www.gocomics.com/peanuts" ,"Peanuts");
@@ -89,7 +89,6 @@ function initializeArray()
 	BasePath.push("https://comicskingdom.com/tina-s-groove" ,"Tina's Groove");
 	BasePath.push("https://www.gocomics.com/lockhorns" ,"The Lockhorns");
 	BasePath.push("https://www.gocomics.com/themiddletons" ,"The middletons");	
-	BasePath.push("https://www.gocomics.com/wallace-the-brave","Wallace The Brave");
 	BasePath.push("https://www.gocomics.com/wizardofid" ,"Wizard of ID");	
 	BasePath.push("https://www.gocomics.com/wizard-of-id-classics" ,"Wizard of ID Classics");	
 	BasePath.push("https://www.gocomics.com/workingitout" ,"Working it Out");
